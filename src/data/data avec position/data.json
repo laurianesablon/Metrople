@@ -1058,7 +1058,7 @@
       "coordinates":  [ 48.87656859902798,2.4070619733807948 ]
    },
    "properties": {
-   "Ligne":"Ligne 3B",
+   "Ligne":"Ligne 3bis",
    "stop_name":"Porte des Lilas",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -1072,7 +1072,7 @@
       "coordinates":  [ 48.871887658077014,2.404361344448241 ]
    },
    "properties": {
-   "Ligne":"Ligne 3B",
+   "Ligne":"Ligne 3bis",
    "stop_name":"Saint-Fargeau",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -1086,7 +1086,7 @@
       "coordinates":  [ 48.86846488701483,2.4014967922879253 ]
    },
    "properties": {
-   "Ligne":"Ligne 3B",
+   "Ligne":"Ligne 3bis",
    "stop_name":"Pelleport",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -1100,7 +1100,7 @@
       "coordinates":  [ 48.865032564464,2.398537305704572 ]
    },
    "properties": {
-   "Ligne":"Ligne 3B",
+   "Ligne":"Ligne 3bis",
    "stop_name":"Gambetta",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2752,7 +2752,7 @@
       "coordinates":  [ 48.88118341152446,2.364365143550256 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Louis Blanc",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2766,7 +2766,7 @@
       "coordinates":  [ 48.882326316477965,2.370465586581431 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Jaurès",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2780,7 +2780,7 @@
       "coordinates":  [ 48.880789805531926,2.374152140698752 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Bolivar",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2794,7 +2794,7 @@
       "coordinates":  [ 48.878422971131464,2.381632921459486 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Buttes Chaumont",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2808,7 +2808,7 @@
       "coordinates":  [ 48.87943610160117,2.388908111185046 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Botzaris",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2822,7 +2822,7 @@
       "coordinates":  [ 48.87693859004261,2.392959616507311 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Place des Fêtes",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2836,7 +2836,7 @@
       "coordinates":  [ 48.88194921492064,2.393228471227492 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Danube",
    "pointgeo":"Paris",
    "route_long_name":"",
@@ -2850,7 +2850,7 @@
       "coordinates":  [ 48.8801595806643,2.398580770693528 ]
    },
    "properties": {
-   "Ligne":"Ligne 7B",
+   "Ligne":"Ligne 7bis",
    "stop_name":"Pré-Saint-Gervais",
    "pointgeo":"Paris",
    "route_long_name":"",
