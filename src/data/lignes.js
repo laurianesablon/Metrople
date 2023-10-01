@@ -1,27 +1,22 @@
-import data from "./data.geojson";
-
- const lignes= fetch(data).then(response => response.json()
-).then(data => {
-    return {
-    ligne_1: data.features.filter(item => item.properties.Ligne === "Ligne 1"),
-    ligne_2: data.features.filter(item => item.properties.Ligne === "Ligne 2"),
-    ligne_3: data.features.filter(item => item.properties.Ligne === "Ligne 3"),
-    ligne_3bis: data.features.filter(item => item.properties.Ligne === "Ligne 3bis"),
-    ligne_4: data.features.filter(item => item.properties.Ligne === "Ligne 4"),
-    ligne_5: data.features.filter(item => item.properties.Ligne === "Ligne 5"),
-    ligne_6: data.features.filter(item => item.properties.Ligne === "Ligne 6"),
-    ligne_7: data.features.filter(item => item.properties.Ligne === "Ligne 7"),
-    ligne_7bis: data.features.filter(item => item.properties.Ligne === "Ligne 7bis"),
-    ligne_8: data.features.filter(item => item.properties.Ligne === "Ligne 8"),
-    ligne_9: data.features.filter(item => item.properties.Ligne === "Ligne 9"),
-    ligne_10: data.features.filter(item => item.properties.Ligne === "Ligne 10"),
-    ligne_11: data.features.filter(item => item.properties.Ligne === "Ligne 11"),
-    ligne_12: data.features.filter(item => item.properties.Ligne === "Ligne 12"),
-    ligne_13: data.features.filter(item => item.properties.Ligne === "Ligne 13"),
-    ligne_14: data.features.filter(item => item.properties.Ligne === "Ligne 14"),
-    
-  };
-
-})
+export const lignesWithColors = [
+  { Ligne: "Ligne 1", color: "#FDCE02" },
+  { Ligne: "Ligne 2", color: "#1763B0" },
+  { Ligne: "Ligne 3", color: "#9F9824" },
+  { Ligne: "Ligne 3bis", color: "#C14191" },
+  { Ligne: "Ligne 4", color: "#F28E42" },
+  { Ligne: "Ligne 5", color: "#82C391" },
+  { Ligne: "Ligne 6", color: "#F4A4BB" },
+  { Ligne: "Ligne 7", color: "#82C391" },
+  { Ligne: "Ligne 7bis", color: "#CFACD3" },
+  { Ligne: "Ligne 8", color: "#D5C902" },
+  { Ligne: "Ligne 9", color: "#E3B429" },
+  { Ligne: "Ligne 10", color: "#8D5E2B" },
+  { Ligne: "Ligne 11", color: "#06814F" },
+  { Ligne: "Ligne 12", color: "#99D4E2" },
+  { Ligne: "Ligne 13", color: "#652483" },
+  { Ligne: "Ligne 14", color: "#652483" },
+];
+function lignes(data) {
+  return data.features.filter((item) => lignesWithColors.Ligne.includes(item.properties.Ligne));
+}
 export default lignes;
-
