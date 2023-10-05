@@ -29,6 +29,17 @@ export function Map() {
           const color = lignesWithColors.find(ligne => ligne.Ligne === d.properties.Ligne);
           return color ? color.color : 'black';
         });
+  
+      d3.json(traces).then(function(tracesData) {
+        const metroPaths = svg.selectAll('.metro-path')
+          .data(tracesData.features)
+          .join('path')
+          .attr('class', 'metro-path')
+          .attr('d', geoGenerator)
+          .attr('stroke', 'red')
+          .attr('stroke-width', 2)
+          .attr('fill', 'none');
+      });
     });
   
     return (
