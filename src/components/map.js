@@ -9,24 +9,25 @@ export function Map() {
     const width = 800;
     const height = 800;
     const projection = d3.geoEqualEarth();
-    const svg = d3.select("body")
-      .append('svg')
-      .style("width", width)
-      .style("height", height);
-    
+    let svg = d3.select("body").select("svg");
+  
+    if (svg.empty()) {
+      svg = d3.select("body").append("svg")
+        .style("width", width)
+        .style("height", height);
+    }
+  
     d3.json(data).then(function(bb) {
       projection.fitSize([width, height], bb);
       const geoGenerator = d3.geoPath().projection(projection);
   
-      svg.append('g')
-        .selectAll('path')
+      const paths = svg.selectAll('path')
         .data(bb.features)
         .join('path')
         .attr('d', geoGenerator)
         .attr('fill', (d) => {
-            const color = lignesWithColors.find(ligne => ligne.Ligne === d.properties.Ligne);
-            return color ? color.color : 'black';
-        
+          const color = lignesWithColors.find(ligne => ligne.Ligne === d.properties.Ligne);
+          return color ? color.color : 'black';
         });
     });
   
