@@ -334,7 +334,7 @@
       "properties": {
         "Ligne": "Ligne 2",
         "route_type": "Subway",
-        "route_color": "0055C8",
+        "route_color": "#0055C8",
         "geo_point_2d": { "lon": 2.3431733723312806, "lat": 48.876235001706426 }
       }
     },
@@ -480,7 +480,7 @@
       "properties": {
         "Ligne": "Ligne 13",
         "route_type": "Subway",
-        "route_color": "6EC4E8",
+        "route_color": "#6EC4E8",
         "geo_point_2d": { "lon": 2.317487608822809, "lat": 48.88090608957795 }
       }
     },
