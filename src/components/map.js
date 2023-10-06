@@ -8,7 +8,7 @@ import paris from '../data/paths/paris.geojson';
 
 export function Map() {
   const width = 700;
-  const height = 700;
+  const height = 650;
   const projection = d3.geoEqualEarth();
   let svg = d3.select("body").select("svg");
 
@@ -19,18 +19,21 @@ export function Map() {
       .style("height", height);
   }
 
-  d3.json(data).then(function(bb) {
-    projection.fitSize([width, height], bb);
+  d3.json(data).then(function(station) {
+    projection.fitSize([width, height], station);
     const geoGenerator = d3.geoPath().projection(projection);
 
     const paths = svg.selectAll('path')
-      .data(bb.features)
-      .join('path')
-      .attr('d', geoGenerator)
-      .attr('fill', (d) => {
-        const color = lignesWithColors.find(ligne => ligne.Ligne === d.properties.Ligne);
-        return color ? color.color : 'black';
-      });
+    .data(station.features)
+    .join('circle') // Change 'path' to 'circle' to render station points as circles
+    .attr('cx', d => projection(d.geometry.coordinates)[0])
+    .attr('cy', d => projection(d.geometry.coordinates)[1])
+    .attr('r', 2.5) // Adjust the desired size of the station points
+    .attr('class', 'station-point') 
+    .attr('fill', (d) => {
+      const color = lignesWithColors.find(ligne => ligne.Ligne === d.properties.Ligne);
+      return color ? color.color : 'black';
+    });
 
     d3.json(traces).then(function(tracesData) {
       const metroPaths = svg.selectAll('.metro-path')
