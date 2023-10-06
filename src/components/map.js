@@ -3,16 +3,18 @@ import * as d3 from "d3";
 import data from "../data/data.geojson";
 import lignes from "../data/lignes";
 import { lignesWithColors } from '../data/lignes';
-import traces from '../data/traces/traces.geojson'
+import traces from '../data/paths/metroPaths.geojson'
+import paris from '../data/paths/paris.geojson';
 
 export function Map() {
-  const width = 800;
-  const height = 800;
+  const width = 700;
+  const height = 700;
   const projection = d3.geoEqualEarth();
   let svg = d3.select("body").select("svg");
 
   if (svg.empty()) {
     svg = d3.select("body").append("svg")
+      .attr("class", "map")
       .style("width", width)
       .style("height", height);
   }
@@ -43,6 +45,18 @@ export function Map() {
         .attr('stroke-width', 2)
         .attr('fill', 'none');
     });
+    d3.json(paris).then(function(parisData) {
+        const parisPaths = svg.selectAll('.paris-path')
+          .data([parisData])
+          .join('path')
+          .attr('class', 'paris-path')
+          .attr('d', geoGenerator)
+          .attr('stroke', 'grey')
+          .attr('stroke-width', 1)
+          .attr('fill', 'none');
+      });
+
+
   });
 
   return (
