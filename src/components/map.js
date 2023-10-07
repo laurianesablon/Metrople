@@ -4,7 +4,7 @@ import { lignesWithColors } from '../data/lignes';
 import traces from '../data/paths/metroPaths.geojson'
 import paris from '../data/paths/paris.geojson';
 import { useEffect, useRef } from "react";
-import { renderStationPoints, renderMetroPaths, renderParisPaths } from "./mapElements";
+import { renderStationPoints, renderMetroPaths, renderParisPerimeter } from "./mapElements";
 
 export function Map() {
   const width = 740;
@@ -22,7 +22,7 @@ export function Map() {
   
       renderStationPoints(station, svg, height, width);
       renderMetroPaths(tracesData, svg, height, width);
-      renderParisPaths(parisPerimeter, svg, height, width);
+      renderParisPerimeter(parisPerimeter, svg, height, width);
     };
   
     fetchData();

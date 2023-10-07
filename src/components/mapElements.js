@@ -39,7 +39,7 @@ export const renderStationPoints = (station, svg, height, width) => {
       .attr("fill", "none");
   };
 
-  export const renderParisPaths = (parisPerimeter, svg, height, width) => {
+  export const renderParisPerimeter = (parisPerimeter, svg, height, width) => {
     const projection = d3.geoMercator().fitSize([width, height], parisPerimeter);
     const geoGenerator = d3.geoPath().projection(projection);
     const parisPaths = svg
