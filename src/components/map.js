@@ -21,8 +21,8 @@ export function Map() {
       const parisPerimeter = await d3.json(paris);
   
       renderStationPoints(station, svg, height, width);
-      renderMetroPaths(tracesData, svg, height, width);
-      renderParisPerimeter(parisPerimeter, svg, height, width);
+      renderMetroPaths(tracesData, svg);
+      renderParisPerimeter(parisPerimeter, svg);
     };
   
     fetchData();

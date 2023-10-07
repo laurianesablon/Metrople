@@ -1,9 +1,10 @@
 import * as d3 from "d3";
 import { lignesWithColors } from '../data/lignes';
 
+let geoGenerator = undefined
 export const renderStationPoints = (station, svg, height, width) => {
     const projection = d3.geoMercator().fitSize([width, height], station);
-    const geoGenerator = d3.geoPath().projection(projection);
+    geoGenerator = d3.geoPath().projection(projection);
     const paths = svg
       .selectAll("circle")
       .data(station.features)
@@ -20,9 +21,7 @@ export const renderStationPoints = (station, svg, height, width) => {
       });
   };
 
-  export const renderMetroPaths = (tracesData, svg, height, width) => {
-    const projection = d3.geoMercator().fitSize([width, height], tracesData);
-    const geoGenerator = d3.geoPath().projection(projection);
+  export const renderMetroPaths = (tracesData, svg) => {
     const metroPaths = svg
       .selectAll(".metro-path")
       .data(tracesData.features)
@@ -39,9 +38,7 @@ export const renderStationPoints = (station, svg, height, width) => {
       .attr("fill", "none");
   };
 
-  export const renderParisPerimeter = (parisPerimeter, svg, height, width) => {
-    const projection = d3.geoMercator().fitSize([width, height], parisPerimeter);
-    const geoGenerator = d3.geoPath().projection(projection);
+  export const renderParisPerimeter = (parisPerimeter, svg) => {
     const parisPaths = svg
       .selectAll(".paris-path")
       .data([parisPerimeter])
