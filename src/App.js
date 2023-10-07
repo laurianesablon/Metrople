@@ -1,10 +1,15 @@
+import Layout from "./components/layout";
 import { Map } from "./components/map";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <Map />
+      <Layout />
+      <main>
+        <div className="map_container">
+          <Map />
+        </div>
+      </main>
     </div>
   );
 }
