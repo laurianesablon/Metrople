@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { lignesWithColors } from '../data/lignes';
+import { lignesWithColors } from '../data/lines';
 
 let geoGenerator = undefined
 export const renderStationPoints = (station, svg, height, width) => {

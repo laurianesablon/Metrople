@@ -1,27 +1,33 @@
 import * as d3 from "d3";
-import data from "../data/data.geojson";
-import { lignesWithColors } from '../data/lignes';
-import traces from '../data/paths/metroPaths.geojson'
-import paris from '../data/paths/paris.geojson';
+import metroLinesData from "../data/metroLines.geojson";
+import metroStationsData from "../data/metroStations.geojson";
+import parisPerimeterData from "../data/parisPerimeter.geojson";
+import { lignesWithColors } from '../data/lines';
 import { useEffect, useRef } from "react";
 import { renderStationPoints, renderMetroPaths, renderParisPerimeter } from "./mapElements";
+import { useDispatch } from "react-redux";
+import { setMetroLines, setMetroStations, setParisPerimeter } from "../store/store";
 
 export function Map() {
   const width = 740;
   const height = 600;
-  const projection = d3.geoEqualEarth();
   const svgRef = useRef(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const svg = d3.select(svgRef.current);
   
     const fetchData = async () => {
-      const station = await d3.json(data);
-      const tracesData = await d3.json(traces);
-      const parisPerimeter = await d3.json(paris);
-  
-      renderStationPoints(station, svg, height, width);
-      renderMetroPaths(tracesData, svg);
+      const metroStations = await d3.json(metroStationsData);
+      const metroLines = await d3.json(metroLinesData);
+      const parisPerimeter = await d3.json(parisPerimeterData);
+      
+      dispatch(setMetroLines(metroLines));
+      dispatch(setMetroStations(metroStations));
+      dispatch(setParisPerimeter(parisPerimeter));
+      
+      renderStationPoints(metroStations, svg, height, width);
+      renderMetroPaths(metroLines, svg);
       renderParisPerimeter(parisPerimeter, svg);
     };
   

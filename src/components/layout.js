@@ -1,4 +1,4 @@
-import { lignesWithColors } from "../data/lignes";
+import { lignesWithColors } from "../data/lines";
 import { useState } from "react";
 export default function Layout() {
     const [toggle, setToggle] = useState(false);
