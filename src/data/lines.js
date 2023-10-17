@@ -35,7 +35,7 @@ export const lignesWithColors = [
   { Ligne: "Ligne 13", color: "#6EC4E8" },
   { Ligne: "Ligne 14", color: "#62259D" },
 ];
-export default function lignes(data) {
+export default function lines(data) {
   const lignesObj = {};
 
   lignesNum.forEach((ligne) => {
