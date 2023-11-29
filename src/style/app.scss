@@ -3,5 +3,39 @@ body {
     padding: 0;
 }
 main {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+   .loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 60px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+  }
+  .loader:before {
+    content:"Loading..."
+  } 
+}
+
+
+  @keyframes l2 {to{background-size: 100% 3px}}
+
+
+  @keyframes ballX {
+    0%,25%,50%,75%, 100%  {background-position: 25% 0,75% 0}
+    40%     {background-position: 25% 0,85% 0}
+    90%     {background-position: 15% 0,75% 0}
+  }
+  @keyframes moveX {
+    100% {transform:translate(0.15px)}
+  }
+    
