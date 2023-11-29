@@ -8,7 +8,6 @@ import { useEffect } from "react";
 function App() {
   const dispatch = useDispatch();
   const loader = useSelector((state) => state.data.loading);
-  console.log(loader);
   useEffect(() => {
     dispatch(fetchData());
   }, []);
