@@ -26,11 +26,11 @@ const dataSlice = createSlice({
       .addCase(fetchData.pending, (state) => {
         state.loading = 'pending';
         state.error = "";
-        console.log('fetchData pending');
+        // console.log('fetchData pending');
       })
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = 'fulfilled';
-        console.log('fetchData fulfilled');
+        // console.log('fetchData fulfilled');
         state.metroStations = action.payload.metroStations;
         state.metroLines = action.payload.metroLines;
         state.parisPerimeter = action.payload.parisPerimeter;
