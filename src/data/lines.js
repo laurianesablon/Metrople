@@ -17,7 +17,7 @@ const lignesNum = [
   "Ligne 14",
 ];
 
-export const lignesWithColors = [
+export const linesWithColors = [
   { Ligne: "Ligne 1", color: "#FFBE00" },
   { Ligne: "Ligne 2", color: "#0055C8" },
   { Ligne: "Ligne 3", color: "#6E6E00" },
@@ -35,7 +35,7 @@ export const lignesWithColors = [
   { Ligne: "Ligne 13", color: "#6EC4E8" },
   { Ligne: "Ligne 14", color: "#62259D" },
 ];
-export default function lines(data) {
+export default function splitDataByLine(data) {
   const lignesObj = {};
 
   lignesNum.forEach((ligne) => {
