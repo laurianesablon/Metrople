@@ -6,7 +6,9 @@ export default function Home() {
     <>
       <Layout />
       <main>
-        <Map />
+        <div className="map_container">
+          <Map />
+        </div>
       </main>
     </>
   );
