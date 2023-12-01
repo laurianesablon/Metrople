@@ -13,27 +13,34 @@ export const renderAllStationPoints = (station, svg, height, width) => {
     .attr("cy", (d) => projection(d.geometry.coordinates)[1])
     .attr("r", 2.5)
     .attr("class", "station-point")
-    .attr("id", d => `${d.properties.stop_name}`)
-    .attr("class", d => `${d.properties.Ligne}`)
+    .attr("id", d => `${d.properties.stop_name.replace(/\s+/g, '-').toLowerCase()}`)
+    .attr("class", d => `${d.properties.Ligne.replace(/\s+/g, '-')}`)
     .attr("fill", "transparent");
 };
 
-export const colorChosenStation = (stationInput, metroStations, setNumberOfStations) => {
-  if (stationInput && metroStations.features) {
-    const stationsFound = metroStations.features.filter(
-      (feature) => feature.properties.stop_name === stationInput
-    );
-    if (stationsFound.length > 0) {
-      setNumberOfStations(prevNumberOfStations => prevNumberOfStations + stationsFound.length);
-      stationsFound.forEach((station) => {
-        const color = linesWithColors.find(ligne => ligne.Ligne === station.properties.Ligne);
-        const stationElement = document.getElementById(stationInput);
-        if (stationElement) {
-          stationElement.style.fill = color.color;
-        }
-      });
+export const setStationColor = (input, stationsData, updateCount) => {
+  if (!input || !stationsData.features) return;
+
+  const formattedInput = input.trim().toLowerCase().replace(/\s+/g, '-');
+  const foundStations = stationsData.features.filter(
+    ({ properties }) => 
+      properties.stop_name.toLowerCase() === input.toLowerCase()
+  );
+
+  if (foundStations.length === 0) return;
+
+  updateCount(count => count + foundStations.length);
+
+  foundStations.forEach(({ properties }) => {
+    const lineColor = linesWithColors.find(
+      ({ Ligne }) => Ligne === properties.Ligne
+    )?.color;
+
+    const elementId = document.getElementById(formattedInput);
+    if (elementId && lineColor) {
+      elementId.style.fill = lineColor;
     }
-  }
+  });
 };
 export const renderAllMetroPaths = (tracesData, svg) => {
   const metroPaths = svg
