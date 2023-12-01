@@ -12,35 +12,45 @@ export const renderAllStationPoints = (station, svg, height, width) => {
     .attr("cx", (d) => projection(d.geometry.coordinates)[0])
     .attr("cy", (d) => projection(d.geometry.coordinates)[1])
     .attr("r", 2.5)
-    .attr("class", "station-point")
-    .attr("id", d => `${d.properties.stop_name.replace(/\s+/g, '-').toLowerCase()}`)
-    .attr("class", d => `${d.properties.Ligne.replace(/\s+/g, '-')}`)
+    .attr(
+      "class",
+      (d) =>
+        `${d.properties.stop_name.replace(/\s+/g, "-")}` +
+        ` ${d.properties.Ligne.replace(/\s+/g, "-")}`
+    )
     .attr("fill", "transparent");
 };
 
 export const setStationColor = (input, stationsData, updateCount) => {
   if (!input || !stationsData.features) return;
 
-  const formattedInput = input.trim().toLowerCase().replace(/\s+/g, '-');
-  const foundStations = stationsData.features.filter(
-    ({ properties }) => 
-      properties.stop_name.toLowerCase() === input.toLowerCase()
-  );
+  const normalizedInput = input.trim().toLowerCase();
+  const newlyDiscoveredStations = [];
 
-  if (foundStations.length === 0) return;
+  stationsData.features.forEach(({ properties }) => {
+    if (properties.stop_name.toLowerCase() === normalizedInput) {
+      const stationClass = properties.stop_name.replace(/\s+/g, "-").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
+      const ligneClass = `${properties.Ligne.replace(/\s+/g, "-")}`;
+      const stationElement = document.querySelector(`.${stationClass}.${ligneClass}`);
+      // console.log(stationElement);
+      // console.log(ligneClass);
 
-  updateCount(count => count + foundStations.length);
+      if (stationElement) {
+        const lineColor = linesWithColors.find(
+          ({ Ligne }) => Ligne === properties.Ligne
+        )?.color;
 
-  foundStations.forEach(({ properties }) => {
-    const lineColor = linesWithColors.find(
-      ({ Ligne }) => Ligne === properties.Ligne
-    )?.color;
-
-    const elementId = document.getElementById(formattedInput);
-    if (elementId && lineColor) {
-      elementId.style.fill = lineColor;
+        if (lineColor && stationElement.style.fill !== lineColor) {
+          stationElement.style.fill = lineColor;
+          newlyDiscoveredStations.push(`.${stationClass}.${ligneClass}`);
+        }
+      }
     }
   });
+
+  if (newlyDiscoveredStations.length > 0) {
+    updateCount((count) => count + newlyDiscoveredStations.length);
+  }
 };
 export const renderAllMetroPaths = (tracesData, svg) => {
   const metroPaths = svg
@@ -59,7 +69,13 @@ export const renderAllMetroPaths = (tracesData, svg) => {
     .attr("fill", "none");
 };
 
-export const renderParisPerimeter = (parisPerimeter, svg, height, width, station) => {
+export const renderParisPerimeter = (
+  parisPerimeter,
+  svg,
+  height,
+  width,
+  station
+) => {
   const projection = d3.geoMercator().fitSize([width, height], station);
   geoGenerator = d3.geoPath().projection(projection);
   const parisPaths = svg
