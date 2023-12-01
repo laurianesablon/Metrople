@@ -93,7 +93,7 @@
    },
    "properties": {
    "Ligne":"Ligne 1",
-   "stop_name":"Charles de Gaulle - Etoile",
+   "stop_name":"Charles de Gaulle-Etoile",
    "pointgeo":"[ 48.873929264455327, 2.2951172138230334 ]",
    "route_long_name":"1",
    "nom_commune":"Paris"
@@ -135,7 +135,7 @@
    },
    "properties": {
    "Ligne":"Ligne 1",
-   "stop_name":"Champs-Élysées - Clemenceau",
+   "stop_name":"Champs-Élysées-Clemenceau",
    "pointgeo":"[ 48.867656292193828, 2.3144645013227811 ]",
    "route_long_name":"1",
    "nom_commune":"Paris"
@@ -177,7 +177,7 @@
    },
    "properties": {
    "Ligne":"Ligne 1",
-   "stop_name":"Palais Royal - Musée du Louvre",
+   "stop_name":"Palais Royal-Musée du Louvre",
    "pointgeo":"[ 48.862222265574147, 2.3364543677542517 ]",
    "route_long_name":"1",
    "nom_commune":"Paris"
@@ -191,7 +191,7 @@
    },
    "properties": {
    "Ligne":"Ligne 1",
-   "stop_name":"Louvre - Rivoli",
+   "stop_name":"Louvre-Rivoli",
    "pointgeo":"[ 48.860780908786978, 2.3409026134809903 ]",
    "route_long_name":"1",
    "nom_commune":"Paris"
@@ -275,7 +275,7 @@
    },
    "properties": {
    "Ligne":"Ligne 1",
-   "stop_name":"Reuilly - Diderot",
+   "stop_name":"Reuilly-Diderot",
    "pointgeo":"[ 48.847349827846116, 2.3858367760086865 ]",
    "route_long_name":"1",
    "nom_commune":"Paris"
@@ -387,7 +387,7 @@
    },
    "properties": {
    "Ligne":"Ligne 2",
-   "stop_name":"Charles de Gaulle - Etoile",
+   "stop_name":"Charles de Gaulle-Etoile",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -527,7 +527,7 @@
    },
    "properties": {
    "Ligne":"Ligne 2",
-   "stop_name":"Barbès - Rochechouart",
+   "stop_name":"Barbès-Rochechouart",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -709,7 +709,7 @@
    },
    "properties": {
    "Ligne":"Ligne 3",
-   "stop_name":"Pont de Levallois - Bécon",
+   "stop_name":"Pont de Levallois-Bécon",
    "pointgeo":"Levallois-Perret",
    "route_long_name":"",
    "nom_commune":""
@@ -919,7 +919,7 @@
    },
    "properties": {
    "Ligne":"Ligne 3",
-   "stop_name":"Réaumur - Sébastopol",
+   "stop_name":"Réaumur-Sébastopol",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1143,7 +1143,7 @@
    },
    "properties": {
    "Ligne":"Ligne 4",
-   "stop_name":"Marcadet - Poissonniers",
+   "stop_name":"Marcadet-Poissonniers",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1171,7 +1171,7 @@
    },
    "properties": {
    "Ligne":"Ligne 4",
-   "stop_name":"Barbès - Rochechouart",
+   "stop_name":"Barbès-Rochechouart",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1227,7 +1227,7 @@
    },
    "properties": {
    "Ligne":"Ligne 4",
-   "stop_name":"Strasbourg - Saint-Denis",
+   "stop_name":"Strasbourg-Saint-Denis",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1241,7 +1241,7 @@
    },
    "properties": {
    "Ligne":"Ligne 4",
-   "stop_name":"Réaumur - Sébastopol",
+   "stop_name":"Réaumur-Sébastopol",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1507,7 +1507,7 @@
    },
    "properties": {
    "Ligne":"Ligne 4",
-   "stop_name":"Bagneux - Lucie Aubrac",
+   "stop_name":"Bagneux-Lucie Aubrac",
    "pointgeo":"Bagneux",
    "route_long_name":"",
    "nom_commune":""
@@ -1535,7 +1535,7 @@
    },
    "properties": {
    "Ligne":"Ligne 5",
-   "stop_name":"Bobigny-Pantin - Raymond Queneau",
+   "stop_name":"Bobigny-Pantin-Raymond Queneau",
    "pointgeo":"Pantin",
    "route_long_name":"",
    "nom_commune":""
@@ -1829,7 +1829,7 @@
    },
    "properties": {
    "Ligne":"Ligne 6",
-   "stop_name":"Charles de Gaulle - Etoile",
+   "stop_name":"Charles de Gaulle-Etoile",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -1927,7 +1927,7 @@
    },
    "properties": {
    "Ligne":"Ligne 6",
-   "stop_name":"La Motte-Picquet - Grenelle",
+   "stop_name":"La Motte-Picquet-Grenelle",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -2221,7 +2221,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"La Courneuve - 8 Mai 1945",
+   "stop_name":"La Courneuve-8 Mai 1945",
    "pointgeo":"La Courneuve",
    "route_long_name":"",
    "nom_commune":""
@@ -2417,7 +2417,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"Chaussée d'Antin - La Fayette",
+   "stop_name":"Chaussée d'Antin-La Fayette",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -2459,7 +2459,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"Palais Royal - Musée du Louvre",
+   "stop_name":"Palais Royal-Musée du Louvre",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -2515,7 +2515,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"Sully - Morland",
+   "stop_name":"Sully-Morland",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -2557,7 +2557,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"Censier - Daubenton",
+   "stop_name":"Censier-Daubenton",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -2739,7 +2739,7 @@
    },
    "properties": {
    "Ligne":"Ligne 7",
-   "stop_name":"Villejuif - Louis Aragon",
+   "stop_name":"Villejuif-Louis Aragon",
    "pointgeo":"Villejuif",
    "route_long_name":"",
    "nom_commune":""
@@ -2935,7 +2935,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"La Motte-Picquet - Grenelle",
+   "stop_name":"La Motte-Picquet-Grenelle",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3033,7 +3033,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Richelieu - Drouot",
+   "stop_name":"Richelieu-Drouot",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3075,7 +3075,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Strasbourg - Saint-Denis",
+   "stop_name":"Strasbourg-Saint-Denis",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3117,7 +3117,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Saint-Sébastien - Froissart",
+   "stop_name":"Saint-Sébastien-Froissart",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3173,7 +3173,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Faidherbe - Chaligny",
+   "stop_name":"Faidherbe-Chaligny",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3187,7 +3187,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Reuilly - Diderot",
+   "stop_name":"Reuilly-Diderot",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3285,7 +3285,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Charenton - Écoles",
+   "stop_name":"Charenton-Écoles",
    "pointgeo":"Charenton-le-Pont",
    "route_long_name":"",
    "nom_commune":""
@@ -3313,7 +3313,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Maisons-Alfort - Stade",
+   "stop_name":"Maisons-Alfort-Stade",
    "pointgeo":"Maisons-Alfort",
    "route_long_name":"",
    "nom_commune":""
@@ -3327,7 +3327,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Maisons-Alfort - Les Juilliottes",
+   "stop_name":"Maisons-Alfort-Les Juilliottes",
    "pointgeo":"Maisons-Alfort",
    "route_long_name":"",
    "nom_commune":""
@@ -3341,7 +3341,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Créteil - L'Échat",
+   "stop_name":"Créteil-L'Échat",
    "pointgeo":"Créteil",
    "route_long_name":"",
    "nom_commune":""
@@ -3355,7 +3355,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Créteil - Université",
+   "stop_name":"Créteil-Université",
    "pointgeo":"Créteil",
    "route_long_name":"",
    "nom_commune":""
@@ -3369,7 +3369,7 @@
    },
    "properties": {
    "Ligne":"Ligne 8",
-   "stop_name":"Créteil - Préfecture",
+   "stop_name":"Créteil-Préfecture",
    "pointgeo":"Créteil",
    "route_long_name":"",
    "nom_commune":""
@@ -3467,7 +3467,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Michel-Ange - Molitor",
+   "stop_name":"Michel-Ange-Molitor",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3481,7 +3481,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Michel-Ange - Auteuil",
+   "stop_name":"Michel-Ange-Auteuil",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3579,7 +3579,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Alma - Marceau",
+   "stop_name":"Alma-Marceau",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3663,7 +3663,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Chaussée d'Antin - La Fayette",
+   "stop_name":"Chaussée d'Antin-La Fayette",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3677,7 +3677,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Richelieu - Drouot",
+   "stop_name":"Richelieu-Drouot",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3719,7 +3719,7 @@
    },
    "properties": {
    "Ligne":"Ligne 9",
-   "stop_name":"Strasbourg - Saint-Denis",
+   "stop_name":"Strasbourg-Saint-Denis",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3957,7 +3957,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Michel-Ange - Molitor",
+   "stop_name":"Michel-Ange-Molitor",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -3971,7 +3971,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Michel-Ange - Auteuil",
+   "stop_name":"Michel-Ange-Auteuil",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4027,7 +4027,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Javel - André Citroën",
+   "stop_name":"Javel-André Citroën",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4069,7 +4069,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"La Motte-Picquet - Grenelle",
+   "stop_name":"La Motte-Picquet-Grenelle",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4125,7 +4125,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Sèvres - Babylone",
+   "stop_name":"Sèvres-Babylone",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4167,7 +4167,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Cluny - La Sorbonne",
+   "stop_name":"Cluny-La Sorbonne",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4181,7 +4181,7 @@
    },
    "properties": {
    "Ligne":"Ligne 10",
-   "stop_name":"Maubert - Mutualité",
+   "stop_name":"Maubert-Mutualité",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4489,7 +4489,7 @@
    },
    "properties": {
    "Ligne":"Ligne 12",
-   "stop_name":"Marcadet - Poissonniers",
+   "stop_name":"Marcadet-Poissonniers",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4517,7 +4517,7 @@
    },
    "properties": {
    "Ligne":"Ligne 12",
-   "stop_name":"Lamarck - Caulaincourt",
+   "stop_name":"Lamarck-Caulaincourt",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4587,7 +4587,7 @@
    },
    "properties": {
    "Ligne":"Ligne 12",
-   "stop_name":"Trinité - d'Estienne d'Orves",
+   "stop_name":"Trinité-d'Estienne d'Orves",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4685,7 +4685,7 @@
    },
    "properties": {
    "Ligne":"Ligne 12",
-   "stop_name":"Sèvres - Babylone",
+   "stop_name":"Sèvres-Babylone",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -4853,7 +4853,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Saint-Denis - Université",
+   "stop_name":"Saint-Denis-Université",
    "pointgeo":"Saint-Denis",
    "route_long_name":"",
    "nom_commune":""
@@ -4881,7 +4881,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Asnières - Gennevilliers Les Courtilles",
+   "stop_name":"Asnières-Gennevilliers Les Courtilles",
    "pointgeo":"Gennevilliers",
    "route_long_name":"",
    "nom_commune":""
@@ -4895,7 +4895,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Saint-Denis - Porte de Paris",
+   "stop_name":"Saint-Denis-Porte de Paris",
    "pointgeo":"Saint-Denis",
    "route_long_name":"",
    "nom_commune":""
@@ -5119,7 +5119,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Champs-Élysées - Clemenceau",
+   "stop_name":"Champs-Élysées-Clemenceau",
    "pointgeo":"Paris",
    "route_long_name":"",
    "nom_commune":""
@@ -5259,7 +5259,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Malakoff - Plateau de Vanves",
+   "stop_name":"Malakoff-Plateau de Vanves",
    "pointgeo":"Malakoff",
    "route_long_name":"",
    "nom_commune":""
@@ -5273,7 +5273,7 @@
    },
    "properties": {
    "Ligne":"Ligne 13",
-   "stop_name":"Malakoff - Rue Etienne Dolet",
+   "stop_name":"Malakoff-Rue Etienne Dolet",
    "pointgeo":"Malakoff",
    "route_long_name":"",
    "nom_commune":""
