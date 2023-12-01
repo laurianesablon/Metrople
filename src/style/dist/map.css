@@ -2,9 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 750px;
-  gap: 100px;
 }
 .map_container .map {
   display: block;
