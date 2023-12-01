@@ -1,18 +1,17 @@
-import { lignesWithColors } from "../data/lines";
+import { Link } from "react-router-dom";
+import { linesWithColors } from "../data/lines";
 import { useState } from "react";
 export default function Layout() {
     const [toggle, setToggle] = useState(false);
+  
+    const handleClick = () => {
+      setToggle(!toggle);
+    };
+  
     return (
-        <header>
-            <h1 className="logo">METROPLE</h1>
-            <nav onClick={() => setToggle(!toggle)}>Ligne
-             {toggle && <ul>
-                {lignesWithColors.map((item) => (
-                    <li key={item.Ligne}>{item.Ligne}</li>
-                ))}
-            </ul>}
-            </nav>
-           
-        </header>
+      <header>
+        <h1 className="logo">METROPLE</h1>
+
+      </header>
     );
-}
+  }
