@@ -2,46 +2,37 @@ import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
 import {
   renderAllStationPoints,
-  renderAllMetroPaths,
   renderParisPerimeter,
-  findStation,
+  colorChosenStation,
 } from "./mapElements";
-import { useDispatch, useSelector } from "react-redux";
-import { render } from "@testing-library/react";
+import {useSelector } from "react-redux";
 
 export default function Map() {
   const svgRef = useRef(null);
-  const dispatch = useDispatch();
-  const [stationInput, setStationInput] = useState('');
-
-  const onInputChange = (e) => {
-    e.preventDefault();
-    setStationInput(e.target.value);
-  };
-  const { metroStations, metroLines, parisPerimeter } =
-    useSelector(state => state.data);
+  const [stationInput, setStationInput] = useState("");
+  const { metroStations, parisPerimeter } = useSelector((state) => state.data);
+  const [numberOfStations, setNumberOfStations] = useState(0);
 
   const drawMap = () => {
     const svg = d3.select(svgRef.current);
     const { width, height } = { width: 740, height: 600 };
     renderAllStationPoints(metroStations, svg, height, width);
-    renderParisPerimeter(
-      parisPerimeter, svg, height, width, metroStations
-    );
+    renderParisPerimeter(parisPerimeter, svg, height, width, metroStations);
   };
 
   useEffect(drawMap, [metroStations, parisPerimeter]);
 
   useEffect(() => {
-    if (stationInput) {
-      const station = document.getElementById(stationInput);
-      if (station) station.style.fill = "red";
-    }
-  }, [stationInput]);
+    colorChosenStation(stationInput, metroStations, setNumberOfStations);
+  }, [stationInput, metroStations, setNumberOfStations]);
 
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setStationInput(e.target.value);
+  };
   return (
     <>
-      <form onSubmit={e => e.preventDefault()}>
+      <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
           value={stationInput}
@@ -50,6 +41,7 @@ export default function Map() {
         />
         <button type="submit">Search</button>
       </form>
+      <p>{numberOfStations}/308</p>
       <svg ref={svgRef} width="740" height="600" />
     </>
   );
