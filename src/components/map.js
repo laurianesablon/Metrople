@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   renderAllStationPoints,
   renderParisPerimeter,
-  colorChosenStation,
+  setStationColor,
 } from "./mapElements";
 import {useSelector } from "react-redux";
 
@@ -11,7 +11,7 @@ export default function Map() {
   const svgRef = useRef(null);
   const [stationInput, setStationInput] = useState("");
   const { metroStations, parisPerimeter } = useSelector((state) => state.data);
-  const [numberOfStations, setNumberOfStations] = useState(0);
+  const [stationCount, setStationsCount] = useState(0);
 
   const drawMap = () => {
     const svg = d3.select(svgRef.current);
@@ -23,8 +23,8 @@ export default function Map() {
   useEffect(drawMap, [metroStations, parisPerimeter]);
 
   useEffect(() => {
-    colorChosenStation(stationInput, metroStations, setNumberOfStations);
-  }, [stationInput, metroStations, setNumberOfStations]);
+    setStationColor(stationInput, metroStations, setStationsCount);
+  }, [stationInput, metroStations, setStationsCount]);
 
   const onInputChange = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Map() {
         />
         <button type="submit">Search</button>
       </form>
-      <p>{numberOfStations}/308</p>
+      <p>{stationCount}/308</p>
       <svg ref={svgRef} width="740" height="600" />
     </>
   );
