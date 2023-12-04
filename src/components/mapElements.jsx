@@ -18,40 +18,10 @@ export const renderAllStationPoints = (station, svg, height, width) => {
         `${d.properties.stop_name.replace(/\s+/g, "-")}` +
         ` ${d.properties.Ligne.replace(/\s+/g, "-")}`
     )
-    .attr("fill", "transparent");
+    .attr("fill","transparent");
 };
 
-export const setStationColor = (input, stationsData, updateCount) => {
-  if (!input || !stationsData.features) return;
 
-  const normalizedInput = input.trim().toLowerCase();
-  const newlyDiscoveredStations = [];
-
-  stationsData.features.forEach(({ properties }) => {
-    if (properties.stop_name.toLowerCase() === normalizedInput) {
-      const stationClass = properties.stop_name.replace(/\s+/g, "-").replace(/\(/g, "\\(").replace(/\)/g, "\\)");
-      const ligneClass = `${properties.Ligne.replace(/\s+/g, "-")}`;
-      const stationElement = document.querySelector(`.${stationClass}.${ligneClass}`);
-      // console.log(stationElement);
-      // console.log(ligneClass);
-
-      if (stationElement) {
-        const lineColor = linesWithColors.find(
-          ({ Ligne }) => Ligne === properties.Ligne
-        )?.color;
-
-        if (lineColor && stationElement.style.fill !== lineColor) {
-          stationElement.style.fill = lineColor;
-          newlyDiscoveredStations.push(`.${stationClass}.${ligneClass}`);
-        }
-      }
-    }
-  });
-
-  if (newlyDiscoveredStations.length > 0) {
-    updateCount((count) => count + newlyDiscoveredStations.length);
-  }
-};
 export const renderAllMetroPaths = (tracesData, svg) => {
   const metroPaths = svg
     .selectAll(".metro-path")
