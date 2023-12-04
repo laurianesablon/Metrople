@@ -5,9 +5,6 @@ function App() {
 
   return (
     <div className="App">
-        {/* <div className="loader-container">
-          <span className="loader"></span>
-        </div> */}
         <Home/>
     </div>
   );
