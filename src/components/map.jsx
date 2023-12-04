@@ -4,7 +4,7 @@ import {
   renderAllStationPoints,
   renderParisPerimeter,
   renderAllMetroPaths,
-} from "./mapElements";
+} from "../utils/mapElements";
 import { useSelector } from "react-redux";
 import { setStationColor } from "../utils/utils";
 
