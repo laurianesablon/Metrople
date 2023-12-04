@@ -3,46 +3,40 @@ import { useEffect, useRef, useState } from "react";
 import {
   renderAllStationPoints,
   renderParisPerimeter,
-  setStationColor,
+  renderAllMetroPaths,
 } from "./mapElements";
-import {useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { setStationColor } from "../utils/utils";
 
-export default function Map() {
+export default function Map({ stationInput, setStationsCount }) {
   const svgRef = useRef(null);
-  const [stationInput, setStationInput] = useState("");
-  const { metroStations, parisPerimeter } = useSelector((state) => state.data);
-  const [stationCount, setStationsCount] = useState(0);
+  const { metroStations, parisPerimeter, metroLines } = useSelector(
+    (state) => state.data
+  );
 
-  const drawMap = () => {
+  useEffect(() => {
     const svg = d3.select(svgRef.current);
-    const { width, height } = { width: 740, height: 600 };
-    renderAllStationPoints(metroStations, svg, height, width);
-    renderParisPerimeter(parisPerimeter, svg, height, width, metroStations);
-  };
-
-  useEffect(drawMap, [metroStations, parisPerimeter]);
+    const updateSize = () => {
+      const width = svg.node().getBoundingClientRect().width;
+      const height = svg.node().getBoundingClientRect().height;
+      console.log(width, height);
+      renderAllStationPoints(metroStations, svg, height, width);
+      renderParisPerimeter(parisPerimeter, svg, height, width, metroStations);
+    };
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  }, [metroStations, parisPerimeter]);
 
   useEffect(() => {
     setStationColor(stationInput, metroStations, setStationsCount);
   }, [stationInput, metroStations, setStationsCount]);
 
-  const onInputChange = (e) => {
-    e.preventDefault();
-    setStationInput(e.target.value);
-  };
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <input
-          type="text"
-          value={stationInput}
-          onChange={onInputChange}
-          placeholder="Enter station"
-        />
-        <button type="submit">Search</button>
-      </form>
-      <p>{stationCount}/308</p>
-      <svg ref={svgRef} width="740" height="600" />
+      <svg ref={svgRef} className="w-screen h-map" />
     </>
   );
 }
