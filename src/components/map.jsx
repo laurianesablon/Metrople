@@ -1,42 +1,62 @@
-import * as d3 from "d3";
-import { useEffect, useRef, useState } from "react";
-import {
-  renderAllStationPoints,
-  renderParisPerimeter,
-  renderAllMetroPaths,
-} from "../utils/mapElements";
-import { useSelector } from "react-redux";
-import { setStationColor } from "../utils/utils";
+import { useEffect } from "react";
+import mapboxgl from "mapbox-gl";
+import { MAPBOX_ACCESS_TOKEN } from "../api.js";
 
-export default function Map({ stationInput, setStationsCount }) {
-  const svgRef = useRef(null);
-  const { metroStations, parisPerimeter, metroLines } = useSelector(
-    (state) => state.data
-  );
-
+export default function ParisMap({ stationInput, setStationsCount }) {
   useEffect(() => {
-    const svg = d3.select(svgRef.current);
-    const updateSize = () => {
-      const width = svg.node().getBoundingClientRect().width;
-      const height = svg.node().getBoundingClientRect().height;
-      console.log(width, height);
-      renderAllStationPoints(metroStations, svg, height, width);
-      renderParisPerimeter(parisPerimeter, svg, height, width, metroStations);
-    };
-    window.addEventListener("resize", updateSize);
-    updateSize();
-    return () => {
-      window.removeEventListener("resize", updateSize);
-    };
-  }, [metroStations, parisPerimeter]);
+    mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/dark-v11",
+      center: [2.349014, 48.864716],
+      zoom: 11,
+      pitch: 50,
+    });
+    map.on("style.load", () => {
+      const layers = map.getStyle().layers;
+      const labelLayerId = layers.find(
+        (layer) => layer.type === "symbol" && layer.layout["text-field"]
+      ).id;
 
-  useEffect(() => {
-    setStationColor(stationInput, metroStations, setStationsCount);
-  }, [stationInput, metroStations, setStationsCount]);
+      map.addLayer(
+        {
+          id: "add-3d-buildings",
+          source: "composite",
+          "source-layer": "building",
+          filter: ["==", "extrude", "true"],
+          type: "fill-extrusion",
+          minzoom: 15,
+          paint: {
+            "fill-extrusion-color": "#aaa",
+            "fill-extrusion-height": [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              15,
+              0,
+              15.05,
+              ["get", "height"],
+            ],
+            "fill-extrusion-base": [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              15,
+              0,
+              15.05,
+              ["get", "min_height"],
+            ],
+            "fill-extrusion-opacity": 0.6,
+          },
+        },
+        labelLayerId
+      );
+    });
+
+    
+  }, []);
 
   return (
-    <>
-      <svg ref={svgRef} className="w-screen h-map" />
-    </>
+    <div id="map" style={{ width: "800px", height: "600px" }}></div>
   );
 }
