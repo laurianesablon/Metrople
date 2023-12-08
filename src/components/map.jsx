@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import mapboxgl from "mapbox-gl";
-import { MAPBOX_ACCESS_TOKEN } from "../api.js";
+import { MAPBOX_ACCESS_TOKEN } from "../utils/config.jsx";
 
 export default function ParisMap({ stationInput, setStationsCount }) {
   useEffect(() => {
