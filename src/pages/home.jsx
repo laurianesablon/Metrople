@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import Map from "../components/map";
+import ParisMap from "../components/map";
 import { useState } from "react";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Layout />
-      <main className="flex flex-col justify-center items-center bg-black">
+      <main className="flex flex-col justify-center items-center">
         <div className="w-full">
           <form onSubmit={(e) => e.preventDefault()}>
             <input
@@ -26,9 +26,11 @@ export default function Home() {
             />
           </form>
           <p>{stationCount}/308</p>
-          <Map stationInput={stationInput} setStationsCount={setStationsCount} />
         </div>
+        <ParisMap stationInput={stationInput} setStationsCount={setStationsCount} />
+
       </main>
+
     </>
   );
 }
