@@ -9,10 +9,11 @@ export default {
       'mono': ['Roboto Mono', 'monospace'],
       'sans': ['Bebas Neue', 'sans-serif'],
     },
-    height: {
-      'map': '42rem',
+    extend: {
+      height: {
+        '128': '62em',
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
