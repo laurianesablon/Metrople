@@ -1,6 +1,7 @@
 import Layout from "../components/layout";
 import ParisMap from "../components/map";
 import { useState } from "react";
+import metroStationsData from "../data/metroStations.json";
 
 export default function Home() {
   const [stationInput, setStationInput] = useState("");
@@ -22,12 +23,12 @@ export default function Home() {
               value={stationInput}
               onChange={onInputChange}
               placeholder="Enter station"
-              className="font-mono"
+              className="font-mono ml-9"
             />
           </form>
-          <p>{stationCount}/308</p>
         </div>
-        <ParisMap stationInput={stationInput} setStationsCount={setStationsCount} />
+        <ParisMap stationInput={stationInput} setStationsCount={setStationsCount} setStationInput={setStationInput} />
+        <p className="text-white">{stationCount}/{metroStationsData.features.length}</p>
 
       </main>
 
