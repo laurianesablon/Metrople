@@ -47,6 +47,6 @@ yarn-error.log*
 
 #keys
 
-src/utils/config.jsx
+.env
 
 
